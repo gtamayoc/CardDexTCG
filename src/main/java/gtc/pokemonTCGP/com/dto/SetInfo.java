@@ -3,6 +3,7 @@ package gtc.pokemonTCGP.com.dto;
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Embeddable;
+import jakarta.persistence.Embedded;
 import lombok.Data;
 
 import java.util.Map;
@@ -37,4 +38,7 @@ public class SetInfo {
 
     @Column(name = "updated_at")
     private String updatedAt;
+
+    @Embedded
+    private SetHash images;
 }

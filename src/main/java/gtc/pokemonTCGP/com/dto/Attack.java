@@ -13,16 +13,15 @@ public class Attack {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "attack_name")
+    @Column(name = "name")
     private String name;
 
     @ElementCollection
     @CollectionTable(name = "attack_cost", joinColumns = @JoinColumn(name = "attack_id"))
-    @Column(name = "cost")
     private List<String> cost;
 
     @Column(name = "converted_energy_cost")
-    private int convertedEnergyCost;
+    private Integer convertedEnergyCost;
 
     @Column(name = "damage")
     private String damage;
